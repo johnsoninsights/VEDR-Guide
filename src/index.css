@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-groundcloud-bg text-groundcloud-text font-sans antialiased selection:bg-groundcloud-green selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-groundcloud-blue;
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1.5px #002B49;
+    color: transparent;
+  }
+  .text-outline-green {
+    -webkit-text-stroke: 1.5px #2AD56D;
+    color: transparent;
+  }
+  .hover-text-solid:hover {
+    color: #002B49;
+    -webkit-text-stroke: 0px;
+    transition: all 0.3s ease;
+  }
+  .offset-shadow {
+    box-shadow: 8px 8px 0px rgba(0, 43, 73, 1);
+  }
+}
+
+/* Custom Hide Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
